@@ -1,17 +1,10 @@
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Premium Digital Card</title>
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Digital Business Card</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -22,108 +15,106 @@
 
 <body>
 
-    <div class="page">
+    <div class="card-container">
 
-        <div class="card-container">
+        <div class="card" id="card">
 
-            <div class="card">
+            <!-- FRONT -->
+            <div class="card-side front">
 
-                <!-- FRONT -->
-                <div class="card-face card-front">
+                <div class="top">
+                    <span>C</span>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
 
-                    <div class="top-line">
-                        <span>DEVELOPER</span>
-                        <i class="fa-solid fa-code"></i>
+                <div class="profile">
+
+                    <div class="profile-circle">
+                        <img src="profile.jpg" alt="Chitrangna">
                     </div>
 
-                    <div class="profile">
+                    <h1>Chitrangna</h1>
 
-                        <div class="image-wrapper">
-                            <img src="profile.jpg" alt="Profile Image">
+                    <p class="profession">
+                        Frontend Developer
+                    </p>
+
+                    <p class="about">
+                        Building clean, responsive and beautiful
+                        digital experiences.
+                    </p>
+
+                </div>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                </div>
+
+                <button class="contact-btn">
+                    <i class="fa-regular fa-envelope"></i>
+                    Contact Me
+                </button>
+
+                <p class="flip-text">
+                    <i class="fa-solid fa-rotate"></i>
+                    Tap to flip
+                </p>
+
+            </div>
+
+
+            <!-- BACK -->
+            <div class="card-side back">
+
+                <div class="back-content">
+
+                    <p class="small-title">LET'S CONNECT</p>
+
+                    <h2>
+                        Let's build<br>
+                        <span>something great.</span>
+                    </h2>
+
+                    <p>
+                        I'm always interested in creating
+                        clean and meaningful digital experiences.
+                    </p>
+
+                    <div class="details">
+
+                        <div>
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>chitrangna@gmail.com</span>
                         </div>
 
-                        <h1>Chitrangna</h1>
-
-                        <p class="profession">
-                            Frontend Developer
-                        </p>
-
-                        <p class="bio">
-                            Building clean, responsive & modern digital experiences.
-                        </p>
-
-                    </div>
-
-                    <div class="socials">
-
-                        <a href="#" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-
-                        <a href="#" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-
-                        <a href="#" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>India</span>
+                        </div>
 
                     </div>
 
                     <button class="contact-btn">
-                        <i class="fa-regular fa-envelope"></i>
-                        Contact Me
+                        <i class="fa-regular fa-paper-plane"></i>
+                        Say Hello
                     </button>
 
-                    <div class="flip-hint">
-                        <i class="fa-solid fa-rotate"></i>
-                        Tap to flip
-                    </div>
-
-                </div>
-
-
-                <!-- BACK -->
-                <div class="card-face card-back">
-
-                    <div class="back-content">
-
-                        <span class="back-label">LET'S CONNECT</span>
-
-                        <h2>Have a project<br>
-                            <span>in mind?</span>
-                        </h2>
-
-                        <p>
-                            Let's create something meaningful,
-                            elegant and impactful together.
-                        </p>
-
-                        <div class="contact-info">
-
-                            <div class="info-item">
-                                <i class="fa-regular fa-envelope"></i>
-                                <span>hello@example.com</span>
-                            </div>
-
-                            <div class="info-item">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>India</span>
-                            </div>
-
-                        </div>
-
-                        <button class="contact-btn back-btn">
-                            <i class="fa-regular fa-paper-plane"></i>
-                            Say Hello
-                        </button>
-
-                        <div class="flip-hint">
-                            <i class="fa-solid fa-rotate-left"></i>
-                            Tap to flip back
-                        </div>
-
-                    </div>
+                    <p class="flip-text">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Tap to flip back
+                    </p>
 
                 </div>
 
@@ -133,8 +124,9 @@
 
     </div>
 
+
     <script>
-        const card = document.querySelector(".card");
+        const card = document.getElementById("card");
 
         card.addEventListener("click", function () {
             card.classList.toggle("flipped");
@@ -142,5 +134,4 @@
     </script>
 
 </body>
-</html>
-```
+</html>     
